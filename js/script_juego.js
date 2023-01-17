@@ -111,7 +111,10 @@ document.addEventListener('keydown', (e) => {
             if (result.isConfirmed) {
                 location.reload();
             } else if (result.isDenied) {
-                window.location = '/index.html';
+                window.location = 'http://renzobtl30.github.io/app-juego-del-ahorcado';
+                // window.location = '/index.html'; // Esta linea de codigo es para direccionar al index.html en este entorno (desarrollador)(cuando se esta programando el codigo),
+                                                    // ya que no funciona cuando el proyecto esta en github pages (en modo producción)
+                                                    // porque la ruta sería http://renzobtl30.github.io/index.html y da error 404
             }
         })
     };
@@ -130,7 +133,10 @@ document.addEventListener('keydown', (e) => {
             if (result.isConfirmed) {
                 location.reload();
             } else if (result.isDenied) {
-                window.location = '/index.html';
+                window.location = 'http://renzobtl30.github.io/app-juego-del-ahorcado';
+                // window.location = '/index.html'; // Esta linea de codigo es para direccionar al index.html en este entorno (desarrollador)(cuando se esta programando el codigo),
+                                                    // ya que no funciona cuando el proyecto esta en github pages (en modo producción)
+                                                    // porque la ruta sería http://renzobtl30.github.io/index.html y da error 404
             }
         })
     }
