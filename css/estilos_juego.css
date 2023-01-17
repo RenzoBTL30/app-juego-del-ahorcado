@@ -14,13 +14,18 @@
     justify-content: end;
 }
 
+#categoria{
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 120px;
+}
+
 .botones{
     display: flex;
     flex-direction: row;
     margin-top: 20px;
     gap: 15px;
 }
-
 #btn-nuevo-juego, #btn-cancelar{
     width: 12rem;
     padding: 15px;

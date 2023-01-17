@@ -1,11 +1,14 @@
 let contenedorPalabraSecreta = document.getElementById('letras-correctas');
 let contenedorLetrasIncorrectas = document.getElementById('letras-incorrectas');
+let parrafoCategoria = document.getElementById('categoria')
 let horca = document.getElementById('horca');
-let lista = sessionStorage.getItem("lista").split(",");
+let lista = JSON.parse(sessionStorage.getItem("lista"));
 
-// Selecciona una palabra aleatoria de la lista, Math.floor sirve para redondear
-let palabraSecreta = lista[Math.floor(Math.random() * lista.length)];
+// Crea un numero random q servira como posicion para ubicar la palabra secreta y su categoria de forma aleatoria, Math.floor sirve para redondear
+let posicionRandom = Math.floor(Math.random() * lista.length);
 
+let palabraSecreta = lista[posicionRandom].detalle;
+let categoria = lista[posicionRandom].categoria;
 let contador = 0;
 
 let numerosUsados = [];
@@ -24,6 +27,8 @@ function nuevoJuego() {
 }
 
 function generarEspacioLetras() {
+
+    parrafoCategoria.textContent = categoria;
 
     for (let i = 0; i < palabraSecreta.length; i++) {
         let letra = document.createElement("div");
