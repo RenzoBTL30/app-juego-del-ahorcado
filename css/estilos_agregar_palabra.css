@@ -5,6 +5,12 @@
     transform: translate(-50%, -50%);
 }
 
+.titulo-requisito{
+    font-weight: bold;
+    margin-top: 20px;
+    font-family: Arial;
+}
+
 .requisito{
     display: flex;
     flex-direction: row;
@@ -19,6 +25,10 @@
 }
 
 #input-texto{
+    margin-top: 20px;
+}
+
+#input-texto, #input-categoria-pista{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -31,7 +41,7 @@
     border-radius: 20px;
 }
 
-#input-texto:focus{
+#input-texto:focus, #input-categoria-pista:focus{
     outline: none;
 }
 

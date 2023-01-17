@@ -1,5 +1,13 @@
+class PalabraSecreta {
+    constructor(detalle, categoria) {
+      this.detalle = detalle;
+      this.categoria = categoria;
+    }
+}
+
 function validarPalabra() {
     let palabra = document.getElementById('input-texto').value;
+    let categoria = document.getElementById('input-categoria-pista').value;
 
     if (soloLetrasMayusculas(palabra) == false) {
         toastr["warning"]("El texto no debe tener letras minúsculas");
@@ -18,8 +26,9 @@ function validarPalabra() {
     }
 
     if (soloLetrasMayusculas(palabra) == true && sinAcentos(palabra) == true && sinNumeros(palabra) == true && sinCaracteresEspeciales(palabra) == true) {
-        agregarPalabra(palabra);
+        agregar(palabra,categoria);
         document.getElementById('input-texto').value = "";
+        document.getElementById('input-categoria-pista').value = "";
         window.location = './juego.html'; // es "./" porque esta en una carpeta: (paginas). Si no se colocará el "./", la ruta seria: paginas/paginas/juego.html y daría error
     }
     
@@ -43,8 +52,21 @@ function validarPalabra() {
     }
 }
 
+function agregar(palabra,categoria) {
+    const palabraSecreta = new PalabraSecreta(palabra,categoria);
+    if (sessionStorage.getItem("lista")) {
+        let lista = JSON.parse(sessionStorage.getItem("lista"));
+        lista.push(palabraSecreta);
+        sessionStorage.setItem("lista",JSON.stringify(lista));
+    } else {
+        let lista = [];
+        lista.push(palabraSecreta);
+        sessionStorage.setItem("lista",JSON.stringify(lista));
+    }
+}
 
-function agregarPalabra(palabra) {
+
+/*function agregarPalabra(palabra) {
     if (sessionStorage.getItem("lista")) {
         let lista = sessionStorage.getItem("lista").split(",");
         lista.push(palabra);
@@ -56,7 +78,7 @@ function agregarPalabra(palabra) {
     }
     //Si existe la lista en el storage, recupera la lista existente, luego añade la palabra nueva a la lista y la vuelve a subir en el storage
     //En caso no exista, crea la lista, añade la palabra nueva, y la sube al storage
-}
+}*/
 
 
 const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
