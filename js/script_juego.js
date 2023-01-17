@@ -111,7 +111,7 @@ document.addEventListener('keydown', (e) => {
             if (result.isConfirmed) {
                 location.reload();
             } else if (result.isDenied) {
-                window.location = '/'; //el slash en este caso, sirve para regresar a la pagina inicial (el index.html)
+                window.location = '/index.html';
             }
         })
     };
@@ -130,7 +130,7 @@ document.addEventListener('keydown', (e) => {
             if (result.isConfirmed) {
                 location.reload();
             } else if (result.isDenied) {
-                window.location = '/';
+                window.location = '/index.html';
             }
         })
     }
