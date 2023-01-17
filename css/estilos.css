@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #dde3f8;
+    min-height: 100vh;
+    position: relative;
+    margin: 0;
+    padding-bottom: 80px;
+}
+
+.titulo{
+    text-align: center;
+    padding-top: 25px;
+}
+
+.titulo h1{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2.7rem;
+}
+
+.menu-principal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+
+    /* Posiciona el menu-principal en el centro del body
+       Requisito: que el body este con position: relative */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#btn-iniciar-juego, #btn-agregar-palabra{
+    width: 250px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 19px;
+    text-align: center;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#btn-iniciar-juego{
+    background-color: #0A3871;
+    color: white;
+    padding: 24px;
+}
+
+#btn-agregar-palabra{
+    background-color: #D8DFE8;;
+    color: #0A3871;
+    padding: 12px;
+}
+
+.footer{
+    color: white;
+    background-color: rgb(61, 58, 58);
+    text-align: center;
+    width: 100%;
+    padding: 5px;
+    position: absolute;
+    bottom: 0;
+}
+
+.footer .autor{
+    font-size: 12px;
+}
+
+#liveAlertPlaceholder{
+    z-index: 200;
+    position: absolute; top: 10px; right: 0px;
+}
+
+#toast-container > div{
+    opacity: 1;
+}

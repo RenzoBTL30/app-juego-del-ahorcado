@@ -1,0 +1,70 @@
+.main{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.requisito{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    margin-top: 20px;
+    font-family: Arial;
+}
+
+.requisito .info{
+    margin-left: 5px;
+}
+
+#input-texto{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    border: none;
+    resize: none;
+    width: 100%;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+#input-texto:focus{
+    outline: none;
+}
+
+
+.botones{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 25px;
+    gap: 15px;
+}
+
+#btn-guardar, #btn-cancelar{
+    width: 12rem;
+    padding: 15px;
+    border: 1px solid #0A3871;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    border-radius: 24px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#btn-guardar{
+    background-color: #0A3871;
+    color: white;
+}
+
+#btn-cancelar{
+    background-color: #D8DFE8;;
+    color: #0A3871;
+}
